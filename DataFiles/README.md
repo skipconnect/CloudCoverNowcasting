@@ -1,1 +1,1 @@
-# This folder contains the different scrips we used for our datapreprocessing
+# This folder contains the different scripts we used for our datapreprocessing.
