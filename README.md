@@ -10,5 +10,6 @@
 
 
 ### Contact
-Feel free to contact us for any questions or comments regarding our implementation.
-E-mail: Madsemil@skipconnect.dk or thomas@skipconnect.dk
+Feel free to contact us for any questions or comments regarding our implementations.
+
+E-mail: madsemil@skipconnect.dk or thomas@skipconnect.dk
