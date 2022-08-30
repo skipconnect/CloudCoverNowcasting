@@ -3,7 +3,7 @@
 ## More specifically we have
 
 * 1) **2020.sh**
-	Which is a bash-scripts generated at https://www.icare.univ-lille.fr/asd-content/extract/subset/ordergeo, used to download geostationary data
+	Which is a bash-scripts generated at https://www.icare.univ-lille.fr/asd-content/extract/subset/ordergeo, used to download Cloud Mask (CMA)-images for 2020
 
 * 2) **GenerateDownloadScripts.ipynb**
 	Which is a a jupyter notebook used to take a bash-script as 2020.sh and convert it to a bash-script that calls the generate.py python script
@@ -14,8 +14,8 @@
 	Which as the new bash-script after GenerateDownloadScript
 
 * 4) **generate.py** 
-	Which is a python script that takes a downloaded day of geostationay data, converts it to a pytorch-file with altitude and land/sea mask concatenated
-	Outputs a day, with all times in a .pt file.
+	Which is a python script that takes a downloaded day of CMA-images, converts it to a pytorch-file with altitude and land/sea mask concatenated.
+	The script outputs a single day, with all times in a .pt file.
 
 * 5) **Altitude.np** 
 	Which is a numpy-file containing altitude information of input area
@@ -24,8 +24,9 @@
 	Which is a numpy-file containing Land/Sea information of input area.
 
 * 7) **NewDataInspectionTest.ipynb**
-	Which is a jupyter notebook file that inspects the geostationary cloud data. Also it inspects the raw geotiff altitude and land/sea mask information
-	This information is reprojected to right CRS and downsamples and cropped to fit spatial resolution of input area as cloud data.
+	Which is a jupyter notebook file that inspects the CMA-images. Also it inspects the raw geotiff altitude and land/sea mask information.
+	This NoteBook also projects raw-data to right CRS and downsamples and cropped to fit spatial resolution of input area as cloud data, and hence generate the files Altitude.np and LandSea.np.
+	
 
 * 8) **eea_r_3035_100_m_clc12_V18_5_land_mask.tif**
 	which is the raw land/sea mask data in geotiff. File used in NewDataInspectionTest.ipynb to generate LandSea.np
